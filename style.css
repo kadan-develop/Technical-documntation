@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.2rem;
+  padding-top: 15px;
+}
+
+h2 {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 20px 0 20px 1.6rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+p {
+  line-height: 1.55;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #333;
+  padding-bottom: 10px;
+  width: 90%;
+}
+
+li {
+  font-size: 18px;
+  margin: 10px 0 0 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+span {
+  font-weight: 400;
+  background-color: rgb(204, 204, 204);
+  padding: 3px;
+}
+
+code {
+  position: inherit;
+  color: rgb(129, 29, 11);
+  margin: 30%;
+  padding: 20px;
+  background-color: rgb(202, 202, 202);
+  text-align: center;
+}
+
+/* NAV_BAR */
+
+#navbar {
+  float: left;
+  position: fixed;
+  min-width: 290px;
+  height: 100%;
+  border-right: 3px solid rgb(153, 153, 153);
+}
+
+.nav-link {
+  margin: 2rem;
+}
+
+/* MAIN_DOC */
+
+#main-doc {
+  margin-top: 20px;
+  position: absolute;
+  left: 330px;
+}
+
+.main-section {
+  margin: 20px;
+}
+
+/* SECTION = INTRODUCTION */
+
+#Introduction ul {
+  margin-bottom: 25px;
+}
+
+/* SECTION = CASCADE */
+
+#Cascade ul {
+  margin-bottom: 25px;
+}
+
+/* STYLE FOR HEADERS */
+.header-style {
+  color: #333;
+  font-size: 1.9rem;
+  margin-bottom: 14px;
+}
+
+/* DIV THAT STANDS FOR PLACING CONTENT LEFT */
+
+.pushing-left {
+  margin-left: 25px;
+}
+
+/* OTHER STYLES / REPEAT ONES */
+
+#for-ul {
+  color: black;
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.style-for-last-p {
+  padding-top: 20px;
+}
+
+.hover-efect:hover {
+  color: tomato;
+}
+
+/* STYLE FOR li tags */
+
+.list-in-sections {
+  font-weight: 300;
+  list-style-type: disc;
+  margin-left: 5rem;
+  padding: 0;
+}
+
+/* NO_BORDER  STYLE */
+
+.no-border {
+  border: none;
+}
+
+/* REPEAT-ONES PADDINGS */
+
+.padding-bottom {
+  padding-bottom: 30px;
+}
+
+.padding-top {
+  padding-top: 40px;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  h1 {
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+  code {
+    margin: 24%;
+    padding: 10px;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #main-doc {
+    margin-top: 20px;
+    position: relative;
+    left: auto;
+  }
+
+  #Introduction ul {
+    padding-bottom: 20px;
+  }
+}

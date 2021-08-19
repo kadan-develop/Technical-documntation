@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Cascade Style Sheet</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h2>Table of content</h1>
+        </header>
+      <ul>
+        <li>
+          <a href="#Introduction" class="nav-link">Introduction</a>
+      </li>
+        <li>
+          <a href="#A_brief_history_of_CSS" class="nav-link">A brief history of CSS</a>
+      </li>
+        <li>
+          <a href="#Cascade" class="nav-link">Cascade</a>
+      </li>
+        <li>
+          <a href="#How_does_CSS_look_like" class="nav-link">How does CSS look like</a>
+      </li>
+        <li>
+          <a href="#Formatting_and_identation" class="nav-link">Formatting and Identation</a>
+      </li>
+        <li>
+          <a href="#Selectors" class="nav-link">Selectors</a>
+      </li>
+        <li>
+          <a href="#CSS_Grid" class="nav-link">CSS Grid</a>
+      </li>
+        <li>
+          <a href="#Flexbox" class="nav-link">Flexbox</a>
+      </li>
+        <li class="no-border">
+          <a href="#Reference" class="nav-link">Reference</a>
+      </li>
+    </ul>
+    </nav>
+    <div id="title">
+      <h1>Cascade Style Sheet (CSS)</h1>
+    </div>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header class="header-style">Introduction</header>
+        <div class="pushing-left">
+          <p>CSS (an abbreviation of Cascading Style Sheets) is the language that we use to style an HTML file, and tell the browser how should it render the elements on the page.</p>
+  
+          <p>A CSS file contains several CSS rules.
+          </p>
+          <ul>
+            <p id="for-ul">Each rule is composed by 2 parts: </p> 
+            <li class="list-in-sections no-border">the selector</li>
+            <li class="list-in-sections no-border">the declaration block</li>
+          </ul>
+  
+          <p>The selector is a string that identifies one or more elements on the page, following a special syntax that we’ll soon talk about extensively.</p>
+  
+          <p>The declaration block contains one or more declarations, in turn composed by a property and valuepair.</p>
+  
+          <p>Carefully organising properties, associating them values, and attaching those to specific elements of the page using a selector is the whole argument of this ebook.</p>
+        </div>
+      </section>
+      <section class="main-section" id="A_brief_history_of_CSS">
+        <header class="header-style">A brief history of CSS</header>
+        <div class="pushing-left">
+          <p>CSS was grown out of the necessity of styling web pages. Before CSS was introduced, people wanted a way to style their web pages, which looked all very similar and “academic” back in the day. You couldn’t do much in terms of personalisation.</p>
+
+          <p>HTML 3.2 introduced the option of defining colors inline as HTML element attributes, and presentational tags like center and font, but that escalated quickly into a far from ideal situation.</p>
+
+          <p>CSS is continuously evolving, and CSS you used 5 years ago might just be outdated, as new idiomatic CSS techniques emerged and browsers changed.
+          It’s hard to imagine the times when CSS was born and how different the web was.</p>
+        </div>
+      </section>
+      <section class="main-section" id="Cascade">
+        <header class="header-style">Cascade</header>
+        <div class="pushing-left">
+          <p>Cascade is a fundamental concept of CSS. After all, it’s in the name itself, the first C of CSS — Cascading Style Sheets — it must be an important thing.</p> <br>
+          <p>What does it mean?</p> <br>
+          <p>Cascade is the process, or algorithm, that determines the properties applied to each element on the page. Trying to converge from a list of CSS rules that are defined in various places. </p> 
+          <ul>
+            <p>It does so taking in consideration:</p>
+            <li class="list-in-sections no-border">specificity</li>
+            <li class="list-in-sections no-border">importance</li>
+            <li class="list-in-sections no-border">inheritance</li>
+            <li class="list-in-sections no-border">order in the file</li>
+          </ul>
+
+          <p>Two or more competing CSS rules for the same property applied to the same element need to be elaborated according to the CSS spec, to determine which one needs to be applied.</p>
+           <p> Even if you just have one CSS file loaded by your page, there is other CSS that is going to be part of the process. We have the browser (user agent) CSS. Browsers come with a default set of rules, all different between browsers. Then your CSS comes into play. </p>
+        </div>
+      </section>
+      <section class="main-section" id="How_does_CSS_look_like">
+        <header class="header-style">How does CSS look like</header>
+        <div class="pushing-left">
+          <p>A CSS rule set has one part called selector, and the other part called declaration. The declaration contains various rules, each composed by a property, and a value.</p>
+          <p class="padding-bottom ">In this example, p is the selector, and applies one rule which sets the value 20px to the font-size property:</p>
+          <code>
+            p {
+              font-size: 20px;
+            }
+          </code>
+
+         <p class="padding-top">A selector can target one or more items:</p>
+          <br>
+         <code>
+          p, a {
+            font-size: 20px;
+          }
+         </code>
+
+         <p class="padding-top">and it can target HTML tags, like above, or HTML elements that contain a certain class attribute with <span>.my-class</span>  or <span> HTML </span> elements that have a specific id attribute with <span>#my-id</span>.</p>
+        </div>
+      </section>
+      <section class="main-section" id="Formatting_and_identation">
+        <header class="header-style">Formatting and Identation</header>
+        <div class="pushing-left">
+          <p>There is no fixed rule for formatting. This CSS is valid:</p>
+          <code>
+            p {
+                font-size: 20px;
+             } 
+            </code>
+            <br>
+            <br>
+            <br>
+            <code>
+              a {color:blue;}
+            </code>
+            
+          
+          <p class='padding-top'>but a pain to see. Stick to some conventions, like the ones you see in the examples above: stick selectors and the closing brackets to the left, indent 2 spaces for each rule, have the opening bracket on the same line of the selector, separated by one space.</p>
+          <p>Correct and consistent use of spacing and indentation is a visual aid in understanding your code.</p>
+        </div>
+      </section>
+      <section class="main-section" id="Selectors">
+        <header class="header-style">Selectors</header>
+        <div class="pushing-left">
+          <p>A selector allows us to associate one or more declarations to one or more elements on the page.</p>
+          <p>Every HTML tag has a corresponding selector, for example: <span>div</span>, <span>span</span>, <span>img</span>.</p>
+           <p>If a selector matches multiple elements, all the elements in the page will be affected by the change.</p> 
+           <p>HTML elements have 2 attributes which are very commonly used within CSS to associate styling to a specific element on the page: <span>class</span> and <span>id</span>.</p>
+           <p>There is one big difference between those two: inside an HTML document you can repeat the same <span>class</span> value across multiple elements, but you can only use an <span>id</span> once. As a corollary, using classes you can select an element with 2 or more specific class names, something not possible using ids.</p>
+           <p>Classes are identified using the <span> . </span> symbol, while ids using the <span> # </span> symbol.</p> 
+        </div>
+      </section>
+      <section class="main-section" id="CSS_Grid">
+        <header class="header-style">CSS Grid</header>
+        <div class="pushing-left">
+          <p>CSS Grid is a fundamentally new approach to building layouts using CSS.</p>
+          <p>Keep an eye on the CSS Grid Layout page on caniuse.com <a href="http://caniuse.com/#feat=css-grid"> (https://caniuse.com/#feat=css-grid)</a> to find out which browsers currently support it. At the time of writing, April 2019, all major browsers (except IE, which will never have support for it) are already supporting this technology, covering 92% of all users.</p>
+          <p>CSS Grid is not a competitor to Flexbox. They interoperate and collaborate on complex layouts, because CSS Grid works on 2 dimensions (rows AND columns) while Flexbox works on a single dimension (rows OR columns).</p>
+        </div>
+      </section>
+      <section class="main-section" id="Flexbox">
+        <header class="header-style">Flexbox</header>
+        <div class="pushing-left">
+          <p>Flexbox, also called Flexible Box Module, is one of the two modern layouts systems, along with CSS Grid.</p>
+          <p>Compared to CSS Grid (which is bi-dimensional), flexbox is a one-dimensional layout model. It will control the layout based on a row or on a column, but not together at the same time.</p>
+          <p>The main goal of flexbox is to allow items to fill the whole space offered by their container, depending on some rules you set.</p>
+
+          <p>A flexbox layout is applied to a container, by setting:</p>
+          <code>display: flex;</code>
+          <p class="padding-top">or</p>
+          <code>display: inline-flex;</code>
+          <p class="padding-top">The content inside the container will be aligned using flexbox.</p>
+        </div>
+      </section>
+      <section class="main-section" id="Reference">
+        <header class="header-style">Reference</header>
+        <div class="pushing-left">
+         <p>I hope this article helped you get up to speed with CSS and get an overview of the main features you can use to style your pages and apps. I wrote it to help you get comfortable with CSS and get you quickly up to speed with using this awesome tool that lets you create stunning designs on the Web, and I hope I achieved with this goal. </p>
+         <p class="center-text style-for-last-p">For more visit: <a class='hover-efect' href="http://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11/#wrapping-up">THE CSS HANDBOOK </a>by Flavio Copes</p>
+        </div>
+      
+      </section> 
+    </main>
+  </body>
+</html>
